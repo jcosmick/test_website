@@ -1,8 +1,67 @@
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Sito Presentazione</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+        <script>
+            function windowSize() {
+                let height = window.innerHeight;
+                let width = window.innerWidth;
+
+                //Desktop Size - Normal navbar
+                if(width>991){
+                    var nav = document.getElementById("navbar").querySelectorAll(".nav-text");
+                    let navLeft = nav[0]
+                    let navRight = nav[1]
+
+                    nav[0].children[0].innerHTML = "Contatti"
+                    nav[0].children[1].innerHTML = "Trovaci"
+                    nav[1].children[0].innerHTML = "Menu"
+                    nav[1].children[1].innerHTML = "Menu"
+                }
+
+                //Smartphone Size - icons navbar
+                if(width <= 991){
+                    var nav = document.getElementById("navbar").querySelectorAll(".nav-text");
+                    let navLeft = nav[0]
+                    let navRight = nav[1]
+
+                    nav[0].children[0].innerHTML = "<i class=\"material-icons\">group</i><span><span>Contatti</span>"
+                    nav[0].children[1].innerHTML = "<i class=\"material-icons\">location_on</i><span>Trovaci</span>"
+                    nav[1].children[0].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
+                    nav[1].children[1].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
+                    
+                }
+                
+            }
+            window.addEventListener('load', windowSize);
+            window.addEventListener('resize', windowSize);
+
+        </script>
 
     </head>
-    <body>
-        <h1>Sei una piciolina :3  </h1>
+    <body style="margin: 0;">
+        <div class="navbar" id="navbar">
+            <div class="nav-text">
+                <a href="contatti.html">Contatti</a>
+                <a href="trovaci.html">Trovaci</a>
+            </div>
+            <div class="nav-icon">  
+                <a  href="index.html">
+                    <img src="esempio.png" class="logo" href="index.html">
+                </a> 
+            </div>
+            <div class="nav-text">
+                <a href="menu.html">Menu</a>
+                <a href="menu.html">Menu</a>
+            </div>
+        </div>
+        <div class="content">
+            <h3>Sticky Navigation Example</h3>
+            <p>MENU HEHHEHEHE</div>
     </body>
 </html>

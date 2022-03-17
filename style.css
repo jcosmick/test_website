@@ -1,12 +1,21 @@
 :root{
+    --all_navbar_textcolor: #090909;
+    --all_navbar_backgroundcolor: #4B5043;
+    --all_content_backgroundcolor: #ebf5ef;
     --mobile_navbar_height: 50px;
+    --desktop_navbar_height: 80px;
+
+}
+
+body{
+    background-color: var(--all_content_backgroundcolor)
 }
 
 /*Style Desktop*/
 @media only screen and (min-width: 991px){
     .navbar{
         position: fixed;
-        background-color: #333;
+        background-color: var(--all_navbar_backgroundcolor);
         top: 0;
         display: flex;
         justify-content: center;
@@ -14,29 +23,35 @@
         overflow-y: auto;
         overflow: visible;
         align-items: center;
-        height: 80px;
+        height: var(--desktop_navbar_height);
         width: 100%;
         
     }
+
+    .navbar a{
+        transition: transform .2s;
+    }
+
     .nav-text{
         display: flex;
         flex-wrap: nowrap;
     }
-    .navbar a{
-        color: #f2f2f2;
+    .nav-text a{
+        color: var(--all_navbar_textcolor);
         text-align: center;
-        padding: 14px 16px;
         font-size: 30px;
         text-decoration: none;
-        padding: 30px 20px 20px;
+        padding: 25px 20px 20px;
     }
     
     .nav-text a:hover{
-        background-color: #ddd;
+        background-color: #738A80;
         color: black;
+        transform: scale(1.15);
     }
     .nav-icon{
         display: flex;
+        margin-top: 10px;
         width: 180px;
         height: 150px;
         justify-content: center;
@@ -47,11 +62,8 @@
         width: 100px;
         height: 100px;
     }
-    .logo:hover{
-        border-style: solid;
-        border-width: medium;
-        border-color: rgb(167, 167, 167);
-        border-radius: 50%;
+    .nav-icon a:hover{
+        transform: scale(1.15);
     }
     .content {
         margin-top: 80px;
