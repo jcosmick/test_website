@@ -13,7 +13,7 @@
                 let width = window.innerWidth;
 
                 //Desktop Size - Normal navbar
-                if(width>800){
+                if(width>991){
                     var nav = document.getElementById("navbar").querySelectorAll(".nav-text");
                     let navLeft = nav[0]
                     let navRight = nav[1]
@@ -25,15 +25,15 @@
                 }
 
                 //Smartphone Size - icons navbar
-                if(width <= 800){
+                if(width <= 991){
                     var nav = document.getElementById("navbar").querySelectorAll(".nav-text");
                     let navLeft = nav[0]
                     let navRight = nav[1]
 
-                    nav[0].children[0].innerHTML = "<i class=\"material-icons\">group</i>"
-                    nav[0].children[1].innerHTML = "<i class=\"material-icons\">location_on</i>"
-                    nav[1].children[0].innerHTML = "<i class=\"material-icons\">grid_view</i>"
-                    nav[1].children[1].innerHTML = "<i class=\"material-icons\">grid_view</i>"
+                    nav[0].children[0].innerHTML = "<i class=\"material-icons\">group</i><span><span>Contatti</span>"
+                    nav[0].children[1].innerHTML = "<i class=\"material-icons\">location_on</i><span>Trovaci</span>"
+                    nav[1].children[0].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
+                    nav[1].children[1].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
                     
                 }
                 
