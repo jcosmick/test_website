@@ -137,7 +137,7 @@ body{
 
     .nav-text a:hover{
         background-color: #556860;
-        transform: scale(1.25);
+        transform: scale(1.20);
     }
     .nav-text a:hover span{
         margin-top: -3px;
