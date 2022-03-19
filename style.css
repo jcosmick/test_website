@@ -14,7 +14,7 @@ body{
 /*Style Desktop*/
 @media only screen and (min-width: 991px){
     .navbar{
-        position: fixed;
+        position: sticky;
         background-color: var(--all_navbar_backgroundcolor);
         top: 0;
         display: flex;
@@ -25,6 +25,8 @@ body{
         align-items: center;
         height: var(--desktop_navbar_height);
         width: 100%;
+        box-shadow: 0px 5px 5px grey;
+        z-index: 2;
         
     }
 
@@ -62,13 +64,52 @@ body{
         align-items: center;
     }
     .logo{
+        border-radius: 50%;
         margin-top: 25px;
         width: 90px;
         height: 90px;
+        box-shadow: 0px .4em 10px 1px rgb(83, 95, 83);
     }
+
     .nav-icon a:hover{
         transform: scale(1.15);
     }
+
+
+    .front-title{
+        position: relative;
+        text-align: center;
+    }
+
+    .title-image{
+        margin-top: 0px;
+        width: 100vw;
+        height: 80vh;
+        z-index: 0;
+        
+    }
+
+    .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+    }
+    .sub-title{
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        font-size: 15px;
+    }
+    .title, .sub-title{
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        
+        color:rgb(84, 201, 123);
+        text-shadow: 3px 3px 5px rgb(0, 0, 0);
+        z-index: 1;
+    }
+
     .content {
         margin-top: 50px;
         display: grid;
@@ -80,7 +121,7 @@ body{
         padding-top: .5%;
         padding-bottom: .5%;
         background-color:#333;
-        box-shadow: 0px -3px 10px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
         font-size: 12px;
         font-family: sans-serif;
         color:aliceblue;
@@ -99,6 +140,17 @@ body{
     .footer .contatti{
         font-size: 14px;
         word-spacing: 5vw;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .footer .contatti a{
+        transition: color .4s;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .footer .contatti a:hover{
+        color: rgb(55, 118, 255)
     }
 }
   
@@ -116,9 +168,10 @@ body{
         overflow: hidden;
         height: var(--mobile_navbar_height);
         width: 100%;
+        z-index: 2;
     }
 
-    .navbar a{
+    .nav-text a{
         color: var(--all_navbar_textcolor);
         text-align: center;
         text-decoration: none;
@@ -135,14 +188,30 @@ body{
         transition: margin-top .2s, transform .2s;
     }
 
-    .navbar a:hover{
-        background-color: #556860;
-        transform: scale(1.20);
+    /*Se il dispositivo è con mouse*/
+    @media (hover: hover) and (pointer: fine){
+        .navbar a:hover{
+            background-color: #556860;
+            transform: scale(1.20);
+        }
+        .nav-text a:hover span{
+            margin-top: -3px;
+            transform: scale(1.25);
+        }
     }
-    .nav-text a:hover span{
-        margin-top: -3px;
-        transform: scale(1.25);
+
+    /*Se il dispositivo è touch */
+    @media (hover: none) and (pointer: coarse){
+        .navbar a:active{
+            background-color: #556860;
+            transform: scale(1.20);
+        }
+        .nav-text a:active span{
+            margin-top: -3px;
+            transform: scale(1.25);
+        }
     }
+
 
     .nav-text{
         display: flex;
@@ -150,6 +219,15 @@ body{
         flex: 1 1 0px;
         justify-content: space-around;
         flex-grow: 1;
+    }
+
+    .nav-text a{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        flex: 1 1 0px;
+        justify-content: center;
+        align-items: center;
     }
 
     .nav-text i{
@@ -171,10 +249,54 @@ body{
         height: var(--mobile_navbar_height);
     }
 
+    .nav-icon a{
+        display: flex;
+        flex: 1 1 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
     .logo{
-        margin-top: 5px;
+        border-radius: 50%;
         width: 45px;
         height: 45px;
+    }
+
+    .front-title{
+        position: relative;
+        text-align: center;
+    }
+
+    .title-image{
+        width:  100%;
+        height: 70vh;
+        background-size: cover;
+        z-index: 0;
+        
+    }
+
+    .title{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+    }
+    .sub-title{
+        position: absolute;
+        top: 54%;
+        left: 50%;
+        font-size: 15px;
+    }
+    .title, .sub-title{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        
+        color:rgb(84, 201, 123);
+        text-shadow: 3px 3px 5px rgb(0, 0, 0);
+        z-index: 1;
     }
 
     .content {
@@ -187,7 +309,7 @@ body{
         padding-top: .5%;
         padding-bottom: .5%;
         background-color:#333;
-        box-shadow: 0px -3px 10px rgba(50, 50, 50, 0.75);
+        box-shadow: 0px 0px 10px rgba(50, 50, 50, 0.75);
         font-size: 12px;
         font-family: sans-serif;
         color:aliceblue;
@@ -206,5 +328,24 @@ body{
     .footer .contatti{
         font-size: 14px;
         word-spacing: 5vw;
+    }
+
+    .footer .contatti a{
+        transition: color .4s;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    /*Dispositivo con mouse*/
+    @media (hover: hover) and (pointer: fine){
+        .footer .contatti a:hover{
+            color: rgb(55, 118, 255)
+        }
+    }
+    /*Dispositivo touch*/
+    @media (hover: none) and (pointer: coarse){
+        .footer .contatti a:focus{
+            color: rgb(55, 118, 255)
+        }
     }
 }
