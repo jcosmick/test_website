@@ -18,10 +18,10 @@
                     let navLeft = nav[0]
                     let navRight = nav[1]
 
-                    nav[0].children[0].innerHTML = "<span class=\"material-icons\">group</span>Contatti"
-                    nav[0].children[1].innerHTML = "<span class=\"material-icons\">location_on</span>Trovaci"
-                    nav[1].children[0].innerHTML = "<span class=\"material-icons\">grid_view</span>Menu"
-                    nav[1].children[1].innerHTML = "<span class=\"material-icons\">grid_view</span>Menu"
+                    nav[0].children[0].innerHTML = "<span class=\"material-icons\">new_releases</span>Novità"
+                    nav[0].children[1].innerHTML = "<span class=\"material-icons\">group</span>Chi siamo"
+                    nav[1].children[0].innerHTML = "<span class=\"material-icons\">location_on</span>Trovaci"
+                    nav[1].children[1].innerHTML = "<span class=\"material-icons\">contacts</span>Contatti"
                 }
 
                 //Smartphone Size - icons navbar
@@ -30,10 +30,10 @@
                     let navLeft = nav[0]
                     let navRight = nav[1]
 
-                    nav[0].children[0].innerHTML = "<i class=\"material-icons\">group</i></span><span>Contatti</span>"
-                    nav[0].children[1].innerHTML = "<i class=\"material-icons\">location_on</i><span>Trovaci</span>"
-                    nav[1].children[0].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
-                    nav[1].children[1].innerHTML = "<i class=\"material-icons\">grid_view</i><span>Menu</span>"
+                    nav[0].children[0].innerHTML = "<i class=\"material-icons\">new_releases</i></span><span>Novità</span>"
+                    nav[0].children[1].innerHTML = "<i class=\"material-icons\">group</i><span>Chi siamo</span>"
+                    nav[1].children[0].innerHTML = "<i class=\"material-icons\">location_on</i><span>Trovaci</span>"
+                    nav[1].children[1].innerHTML = "<i class=\"material-icons\">contacts</i><span>Contatti</span>"
                     
                 }
                 
@@ -47,8 +47,8 @@
     <body style="margin: 0;">
         <div class="navbar" id="navbar">
             <div class="nav-text">
-                <a href="#contatti"><i class=\"material-icons\">group</i>Contatti</a>
-                <a href="#trovaci"><i class=\"material-icons\">location_on</i>Trovaci</a>
+                <a href="#news"><i class=\"material-icons\">group</i>Novità</a>
+                <a href="#who"><i class=\"material-icons\">location_on</i>Chi siamo</a>
             </div>
             <div class="nav-icon">  
                 <a  href="#front-title">
@@ -56,47 +56,51 @@
                 </a> 
             </div>
             <div class="nav-text">
-                <a href="#menu1"><i class=\"material-icons\">grid_view</i>Menu</a>
-                <a href="#menu2"><i class=\"material-icons\">grid_view</i>Menu</a>
+                <a href="#where"><i class=\"material-icons\">grid_view</i>Trovaci</a>
+                <a href="#contatti"><i class=\"material-icons\">grid_view</i>Contatti</a>
             </div>
         </div>
         <div class="front-title" id="front-title">
             <div class="title">
-                <div class="top-title">TITOLO AD EFFETTO</div>
+                <div class="top-title">Lago caron</div>
                 <div class="sub-title">Demo made by Mengato Andrea</div>
             </div>
         </div>
         <div class="content">
+            <div class="news" id="news">
+                <h2>Novità</h2>
+                <p>
+                    Puoi pescare da noi, ora disponibile anche l'abbonamento, con solo 50€ potrai pescare 2000kg
+                    di pesce fresco dal nostro lago
+                    è molto divertente pescare e  sopratuttto mangiare un sacco di pesce, con noi ti divertirai un saccoooo
+                    hahahahahahahhaha e non dimenticare di portare la tua famiglia
+                    con loro potresti annoiarti un pochino ma tanto ci sarò io il proprietario a tirarti su di morale
+                    ahahahahhahah
+                </p>
+            </div>
+            <div class="chi" id="who">
+                <h2>Chi siamo</h2>
+                <img src="fratelli.jpg">
+                <p>Siamo due fratelli, con una passione, la pesca, adoriamo pescare e mangiare
+                    amiamo le grigliate e fare tante cose al lago, il nostro è un bel progetto, ci piace la natura
+                    e vogliamo preservarla ed aiutarla.
+                    Abbiamo trovato questo posto malmesso e abbiamo deciso di lavorarci
+                    impegniando tempo e risorse per la rimessa apposto di questo luogo
+                    per questo abbiamo deciso di ridare vita ad un posto abbandonato a se stesso
+                    Vieni a trovarci e passa una bella giornata in compagnia degli amici o della famiglia
+                    mangia, pesca e goditi una tranquilla giornata in compagnia
+                </p>
+            </div>
+            <div class="trovaci" id="where">
+                <h2>Trovaci</h2>
+                <p>Ci trovi in via papa luciani 5 nella strada a sinistra</p>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5943.9831277017975!2d11.986808417016663!3d45.32485794934079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477ec3c5422f8941%3A0xc1d22e590e790a3a!2sbar%20Laghetto%20Di%20Caron!5e0!3m2!1sit!2sit!4v1648055166048!5m2!1sit!2sit" width="650px" height="450px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
             <div class="contatti" id="contatti">
                 <h2>Contatti</h2>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            </div>
-            <div class="trovaci" id="trovaci">
-                <h2>Trovaci</h2>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            </div>
-            <div class="menu" id="menu1">
-                <h2>Menu1</h2>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-            </div>
-            <div class="menu" id="menu2">
-                <h2>Menu2</h2>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-                <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                <p>Tel: 123459789</p>
+                <p>email: oaskjdoasj@gmail.com</p>
+                <p>fax: sasaasasasas</p>
             </div>
         </div>
         <div class="footer">
