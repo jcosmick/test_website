@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" author="Andrea Mengato">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="icon" href="esempio.jpg">
   
 
         <script>
@@ -41,14 +42,29 @@
             window.addEventListener('load', windowSize);
             window.addEventListener('resize', windowSize);
 
-
             var counter = 1;
+            window.addEventListener('load', (event) => {
+                autobtns = [document.getElementsByClassName("auto-btn1")[0], document.getElementsByClassName("auto-btn2")[0], document.getElementsByClassName("auto-btn3")[0], document.getElementsByClassName("auto-btn4")[0]]
+                autobtns[counter-1].style.background = "#9BC4BC";
+            });    
+
             function getRad(radio) {
+                autobtns = [document.getElementsByClassName("auto-btn1")[0], document.getElementsByClassName("auto-btn2")[0], document.getElementsByClassName("auto-btn3")[0], document.getElementsByClassName("auto-btn4")[0]]
+                autobtns.forEach(btn => {
+                    btn.style.background = "rgba(255, 255, 255, 0)"
+                });
                 counter = radio.id.slice(-1)
-            }
-            
-              setInterval(function(){
                 document.getElementById('radio' + counter).checked = true;
+                autobtns[counter-1].style.background = "#9BC4BC";
+            }
+
+              setInterval(function(){
+                autobtns = [document.getElementsByClassName("auto-btn1")[0], document.getElementsByClassName("auto-btn2")[0], document.getElementsByClassName("auto-btn3")[0], document.getElementsByClassName("auto-btn4")[0]]
+                document.getElementById('radio' + counter).checked = true;
+                autobtns.forEach(btn => {
+                    btn.style.background = "rgba(255, 255, 255, 0)"
+                });
+                autobtns[counter-1].style.background = "#9BC4BC";
                 counter++;
                 if(counter > 4){
                   counter = 1;
@@ -103,21 +119,21 @@
                         <img src="fratelli.jpg" alt="">
                     </div>
                     <!--slide images end-->
-                    <!--automatic navigation start-->
+                    <!--automatic navigation start-
                     <div class="navigation-auto">
                         <div class="auto-btn1"></div>
                         <div class="auto-btn2"></div>
                         <div class="auto-btn3"></div>
                         <div class="auto-btn4"></div>
                     </div>
-                    <!--automatic navigation end-->
+                    automatic navigation end-->
                     </div>
                     <!--manual navigation start-->
                     <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
+                    <label for="radio1" class="manual-btn"><div class="auto-btn1"></div></label>
+                    <label for="radio2" class="manual-btn"><div class="auto-btn2"></div></label>
+                    <label for="radio3" class="manual-btn"><div class="auto-btn3"></div></label>
+                    <label for="radio4" class="manual-btn"><div class="auto-btn4"></div></label>
                     </div>
                     <!--manual navigation end-->
                 </div>
