@@ -43,6 +43,10 @@
 
 
             var counter = 1;
+            function getRad(radio) {
+                counter = radio.id.slice(-1)
+            }
+            
               setInterval(function(){
                 document.getElementById('radio' + counter).checked = true;
                 counter++;
@@ -71,7 +75,7 @@
         </div>
         <div class="front-title" id="front-title">
             <div class="title">
-                <div class="top-title">Lago caron</div>
+                <div class="top-title">Lago di Brugine</div>
                 <div class="sub-title">Demo made by Mengato Andrea</div>
             </div>
         </div>
@@ -80,10 +84,10 @@
                 <div class="slider">
                     <div class="slides">
                     <!--radio buttons start-->
-                    <input type="radio" name="radio-btn" id="radio1">
-                    <input type="radio" name="radio-btn" id="radio2">
-                    <input type="radio" name="radio-btn" id="radio3">
-                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio1" onchange="getRad(this)">
+                    <input type="radio" name="radio-btn" id="radio2" onchange="getRad(this)">
+                    <input type="radio" name="radio-btn" id="radio3" onchange="getRad(this)">
+                    <input type="radio" name="radio-btn" id="radio4" onchange="getRad(this)">
                     <!--radio buttons end-->
                     <!--slide images start-->
                     <div class="slide first">
